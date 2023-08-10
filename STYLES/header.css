@@ -1,34 +1,121 @@
-header{
-    background-color: rgb(178, 17, 17);
-    padding: 20px;
-    height: 70px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    max-width: 100vw;
+    min-height: calc(100vh - 110px);
+    margin: 0;
+    margin-top: 110px;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+header {
+    background-color: #e33c1e;
+    padding: 0px 20px;
+    height: 110px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 3.125rem;
 }
 
 nav ul {
-display: flex;
-justify-content: space-around;
-list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    width: 400px;
 }
 
-
-nav a{
-    margin: 10PX;
+header nav a {
+    color: #fff;
+    font-size: 18px;
     text-decoration: none;
 }
+.hamburger{
+    display: none;
+}
 
-.profile{
+.profile {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    width: 200px;
+    height: 80px;
+    padding: 0px 16px;
+}
+
+.profile p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 
- .pic{
-    border-radius: 35px;
-    margin: 10px;
+
+@media screen and (max-width: 576px)
+ {
+    header {
+        padding: 0px 0px;
+        height: 90px;
+        width: 100rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        width: 20rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .profile,
+    header nav {
+        display: none;
+       
+
+    }
+    .hamburger{
+        display: block;
+    }
 }
